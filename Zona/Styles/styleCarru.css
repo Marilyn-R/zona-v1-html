@@ -1,0 +1,439 @@
+body {
+  font-family: Helvetica; 
+  font-weight: 400;
+  background-color:rgba(0,255,0,0.3);
+}
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: -2.8em 0;
+  color: #555555;
+}
+
+
+/*Carousel*/
+.carrousel {
+  background: #ffffff;
+  text-align: center;
+  padding: 9em 0;
+  height: 9.5em;
+   border-radius: 8%;
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  top: 10px;
+}
+.carrousel h2 {
+  margin: 0;
+  margin-top: 4.7em;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+  color: #bbbbbb;
+}
+.carrousel .slides {
+  width: 400%;
+  left: 0;
+  padding-left: 0;
+  padding-top: 1em;
+  overflow: hidden;
+  list-style: none;
+  position: relative
+ 
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+}
+.carrousel .slides li {
+  width: 25%;
+  position: relative;
+  float: left;
+
+}
+.carrousel li p{
+  margin-top: 0;  
+}
+.carrousel li q {
+  max-width: 90%;
+  margin: auto;
+  color: #666666;
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+.carrousel li img {
+  width: 9em;
+  height: 6em;
+  object-fit: cover;
+  text-align: center;
+  position: center;
+  align-items: center;
+  border-radius: 10%;
+  margin-left: .2em;
+  margin-right: 0.5em;
+  vertical-align: center;
+
+}
+.carrousel li span.author {
+  margin-top:1.7em;
+  font-size: 1.2em;
+  color: #777777;
+  display: block;
+}
+.carrousel .slidesNavigation {
+  display: block;
+  list-style: none;
+  text-align: center;
+  bottom: 1em;
+  position: absolute; 
+  width: 154px; /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
+  left: 50%; /*Centering de element*/
+  margin-left: -49px; /*adjusting the centering by applying a negative margin of half of the width*/
+}
+.carrousel input {
+  display: none;
+}
+.carrousel .slidesNavigation label {
+  float: left;
+  margin: 6px;
+  display: block;
+  height: 15px;
+  width: 15px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 2px #3cb929;
+  font-size: 0;
+}
+
+.radio-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+#radio-2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+#radio-3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+
+.carrousel .slidesNavigation label:hover {
+   cursor: pointer;
+}
+/* You have to repeat this with each slide/dot */
+.carrousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
+.carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
+.carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
+}
+
+@media  (max-width: 796px) {
+  .carrousel{
+    height: 8.5em;
+  }
+}
+@media  (max-width: 480px) {
+  .carrousel li p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .carrousel li q {
+      font-size: 1em;
+  }
+  .carrousel li img {
+     width:2em;
+     margin-left: -1em;
+     margin-right: 0.25em;
+  }
+}
+.login {
+ 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+  min-height: calc(100vh - 200px); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
+}
+
+.login__container {
+  
+  border: 2px solid white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 560px;
+  padding: 10px 18px 10px;
+  width: 300px;
+}
+
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__container--form label {
+  font-size: 15px;
+}
+
+.login__container--remember-me {
+  color: #635f5f;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login__container--remember-me a {
+  color: #635f5f;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+
+.login__container--social-media > div {
+  color: #827e7e;
+  align-items: center;
+  
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+  margin-right: 10px;
+  width: 30px;
+  align-items: center;
+}
+
+.login__container--register {
+  font-size: 14px;
+}
+
+.login__container--register a {
+  color:#484d47;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  align-items: center;
+  background-color: #21c08b;
+  color: white;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  top: 10px;
+  width: 100%;
+}
+
+.header__img {
+  float: left;
+  font-weight: 700;
+            font-size: 1.875em;
+
+}
+
+.contenedor-redes-sociales{
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    background: #59d986;
+}
+h4{
+    text-align: center;
+}
+.contenedor-redes-sociales a {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    width: 160px;
+    line-height: 35px;
+    padding: 0;
+    color: #fff;
+    border-radius: 50px;
+    background: #fff;
+    margin: 5px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.contenedor-redes-sociales a:hover span.circulo {
+    left: 100%;
+    margin-left: -35px;
+    background: #fff;
+}
+
+.contenedor-redes-sociales a:hover span.titulo {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a:hover span.titulo-hover {
+    opacity: 1;
+    color: #1c1d1c;
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a span.circulo {
+    display: block;
+    color: #484d47;
+    position: absolute;
+    float: left;
+    margin: 3px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+.contenedor-redes-sociales a span.circulo i {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.contenedor-redes-sociales a span.titulo, .contenedor-redes-sociales a span.titulo-hover {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.contenedor-redes-sociales a span.titulo {
+    right: 15px
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    left: 15px
+}
+
+
+/*----------Colores de los botones----------*/
+
+.contenedor-redes-sociales .facebook {
+    border: 2px solid #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover, .contenedor-redes-sociales .facebook span.circulo {
+    background: #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover span.circulo, .contenedor-redes-sociales .facebook span.titulo {
+    color: #3b5998;
+}
+
+.contenedor-redes-sociales .twitter {
+    border: 2px solid #1da1f2;
+}
+
+.contenedor-redes-sociales .twitter:hover, .contenedor-redes-sociales .twitter span.circulo {
+    background: #1da1f2;
+}
+
+.contenedor-redes-sociales .twitter:hover span.circulo, .contenedor-redes-sociales .twitter span.titulo {
+    color: #1da1f2;
+}
+
+.contenedor-redes-sociales .gplus {
+    border: 2px solid #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover, .contenedor-redes-sociales .gplus span.circulo {
+    background: #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover span.circulo, .contenedor-redes-sociales .gplus span.titulo {
+    color: #dd4b39;
+}
+
+
+/*--------------Mediaqueries--------------*/
+
+@media screen and (max-width: 480px) {
+    .contenedor-redes-sociales a {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+.header {
+  align-items: center;
+  background: #59d986;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+.header__img {
+  margin-left: 10px;
+  width: 200px;
+}
+
+.header__menu {
+  margin-right: 30px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px -14px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 40px;
+}
