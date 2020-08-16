@@ -1,0 +1,115 @@
+body{
+	
+}
+
+img{
+	width: 350px;
+	height: 350px;
+}
+.fondo {
+ background: rgba(183,222,237,1);
+background: -moz-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 26%, rgba(183,222,237,1) 99%, rgba(33,180,226,1) 100%);
+background: gradient(left top, right top, color-stop(0%, rgba(183,222,237,1)), color-stop(26%, rgba(113,206,239,1)), color-stop(99%, rgba(183,222,237,1)), color-stop(100%, rgba(33,180,226,1)));
+background: linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 26%, rgba(183,222,237,1) 99%, rgba(33,180,226,1) 100%);
+background: -o-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 26%, rgba(183,222,237,1) 99%, rgba(33,180,226,1) 100%);
+background: -ms-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 26%, rgba(183,222,237,1) 99%, rgba(33,180,226,1) 100%);
+background: linear-gradient(to right, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 26%, rgba(183,222,237,1) 99%, rgba(33,180,226,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#21b4e2', GradientType=1 );
+        background-size: cover;
+  overflow: hidden;
+}
+
+
+#d2{
+align-items: center;
+justify-content: center;
+ width:21px;
+ height:21px;
+ border-radius:1px;
+ left:100%;
+ bottom:50%;
+ animation:past 3s ;
+ position:absolute;
+}
+
+@keyframes past{
+
+	0% { right:13%; opacity:1; }
+  25% { top-right:500px; transform:scale(10,10); opacity:1; transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg);}
+  50% { left:800px; transform:scale(15,15);}
+  75% { left:700px; transform:scale(20,20);}
+ 
+90% {  opacity:1; transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg);transform: rotate(360deg);}
+  100% {   opacity:0;}
+}
+
+
+#d1{
+align-items: center;
+justify-content: center;
+ width:21px;
+ height:21px;
+  left:100%;
+ border-radius:1px;
+ bottom:50%;
+ animation:vaca 3s ;
+ position:absolute;
+ 
+
+}
+
+@keyframes vaca{
+
+	0% { left:1%; opacity:1;}
+  25% { left:500px; transform:scale(10,10); opacity:1; transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg); }
+  50% { left:500px; transform:scale(15,15); }
+  75% { left:700px; transform:scale(20,20); }
+  
+	90% { opacity:1;transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg);}
+  100% { transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg); opacity:0;}
+}
+
+
+
+#d3{
+align-items: center;
+justify-content: center;
+ width:21px;
+ height:21px;
+  top:100%;
+ border-radius:1px;
+ bottom:200%;
+ animation:tierr 3s ;
+ position:absolute;
+ 
+
+}
+
+@keyframes tierr{
+
+  0% { top:10%; opacity:1;}
+  25% { top-right:200px; transform:scale(10,10); opacity:1; transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg); }
+  50% { top:320px; transform:scale(15,15); }
+  75% { top:305px; transform:scale(20,20); }
+  
+  90% { top-right:30px; opacity:1;transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg);}
+  100% {  transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: rotate(360deg); left:700px;  opacity:0;}
+}
+
+
